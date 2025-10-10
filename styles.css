@@ -278,11 +278,26 @@ main > section:nth-child(2) > div > div:first-child > p {
 }
 
 /* Grid de Features */
+/*Se lee de derecha a izquierda -> el footer que está dentro del section que es el segundo hijo del main
+  El operador '>' indica que el section sea hijo inmediato del main*/
 main > section:nth-child(2) footer {
+  /*Para indicar que estamos creando una cuadrícula*/
   display: grid;
+  /*Separa la cuadrícula en columnas, cada columna tiene un valor o una proporción*/
+  /*Hacemos una condición para que se adapte a la pantalla: hace un auto-fit donde indicamos que si la caja tiene espacio para hacer 3 columnas de 280px las hace*/
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /*Separación del grid*/
   gap: 16px
 }
+
+/*OPción 2:
+Cuando se cumple la condición, la web tendrá 3 columnas
+@media (width >= 800px) {
+    main > section:nth-child(2) footer {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+*/
 
 /* Feature Cards */
 /* article {
@@ -360,32 +375,3 @@ article{
         font-weight: 500;
     }
 }
-
-
-
-/*
-article {
-  background-color: var(--card-bg);
-  padding: 2rem;
-  margin-bottom: 16px;
-  border-radius: 0.5rem;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
-
-  svg {
-    color: var(--primary-light);
-    background: rgba(0, 153, 255, .3);
-    width: 64px;
-    height: 64px;
-    border-radius: 100%;
-    padding: 16px;
-  }
-
-  p {
-    color: var(--text-muted);
-  }
-
-  h3 {
-    font-weight: 500;
-  }
-}
-*/
