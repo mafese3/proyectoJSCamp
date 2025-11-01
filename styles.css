@@ -203,6 +203,7 @@ form span {
 }
 
 form input[type="text"] {
+  /* sirve para que el input ocupe toda la barra de búsqueda*/
   flex: 1;
   background: transparent;
   border: none;

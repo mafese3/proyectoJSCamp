@@ -1,141 +1,239 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang = "es">
 
-<!--La etiqueta head no muestra nada, solo para metadatos-->
-<head> 
-    <!--El titulo de la página-->
+<head>
     <title> MafeseJobs - Busqueda</title>
 
-    <!--Permite hacer uso de caracteres especiales-->
     <meta charset="UTF-8" />
 
-    <!--Es la descripción que aparece a la hora de buscar la página web-->
-    <meta name="description" content="Página para buscar empleo" />
+    <link rel="stylesheet" href="./busqueda.css">
 
-    <!--Sirve para enlazar los estilos de otro archivo-->
-    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <!-- Creamos las etiquetas básicas "header, main, footer"-->
-    <!--Header forma el encabezado de la página-->
     <header>
-        <!--h2 -> headline2, títulos para la página el número indica el tamaño-->
         <h2>MAFESE JOBS</h2>
 
-        <!--nav indica elementos navegables-->
         <nav>
-            <!--a indica ancla, crea un enlace entre esta página y otra a la que queramos navegar-->
-            <!--href es la referencia de la página a la que queremos ir-->
-            <a href = ""> Inicio</a>
-            <a href = ""> Empleos</a>
-            <a href = ""> Empresas</a>
-            <a href = ""> Salarios</a>
+            <a href = "index.html"> Inicio</a>
+            <a href = "busqueda.html"> Empleos</a>
+            <a href=""> Empresas</a>
+            <a href=""> Salarios</a>
         </nav>
-        
-        <!--div indica división, es un contenedor que organiza cosas, no tiene un significado-->
+
         <div>
-            <a href="">Subir CV</a>
-            <img src="./images/foto_marina.png" width="30"/>
+            <button type="submit">Subir CV</button>
+            <img src="./images/foto_marina.png" width="30">
         </div>
+
     </header>
 
     <main>
-
         <section>
-            <h1> Encuentra tu próximo trabajo</h1>
-            <p>Explora miles de oportuniadades en el sector tecnológico</p>
+            <h1>Encuentra tu próximo trabajo</h1>
+            <p>Explora miles de oportunidades en el sector tecnológico.</p>
+
             <form role="search">
-                <!--Inserta un icono con la etiqueta en svg (buscado en TABLER ICONS)-->
-                <!--Son imágenes que permiten cambiar su escala para personalizar sin perder la calidad-->      
-                <svg xmlns="http://www.w3.org/2000/svg"  
-                width="24"  height="24"  viewBox="0 0 24 24"  
-                fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  
-                stroke-linejoin="round"  
-                class="icon icon-tabler icons-tabler-outline icon-tabler-list-search">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                width="24" height="24" viewBox="0 0 24 24" 
+                fill="none" stroke="currentColor" stroke-width="2" 
+                stroke-linecap="round" stroke-linejoin="round" 
+                class="icon icon-tabler icons-tabler-outline icon-tabler-search">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M15 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                <path d="M18.5 18.5l2.5 2.5" /><path d="M4 6h16" />
-                <path d="M4 12h4" /><path d="M4 18h4" /></svg>
-    
-                <!--Permite introducir texto, el tipo indica lo que se va a introducir, puede ser number, color, etc.-->
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                <path d="M21 21l-6 -6" /></svg>
+
                 <input type="text" placeholder="Buscar trabajos, empresas o habilidades">
-                
-                <!--Es un navigable pero que no va a ir a otra página-->
-                <button type="submit">Buscar</button> 
-                
+
             </form>
-        </section> 
+
+            <div class="filtros">
+                <details class="filter">
+                    <summary>
+                        Tecnología
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" 
+                        height="24" viewBox="0 0 24 24" fill="currentColor" 
+                        class="icon icon-tabler icons-tabler-filled 
+                        icon-tabler-caret-down"><path stroke="none" 
+                        d="M0 0h24v24H0z" fill="none"/><path d="M18 9c.852 0 1.297 
+                        .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 
+                        -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 
+                        -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 
+                        -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 
+                        -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 
+                        -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 
+                        -.01l.06 -.01l.057 -.004l12.059 -.002z" /></svg>
+                    </summary>
+                    <div class="filter-options">
+                        <div>HTML</div>
+                        <div>C</div>
+                        <div>Java</div>
+                        <div>JavaScript</div>
+                        <div>Python</div>
+                    </div>
+                </details>
+                <details class="filter">
+                    <summary>
+                        Ubicación
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" 
+                        height="24" viewBox="0 0 24 24" fill="currentColor" 
+                        class="icon icon-tabler icons-tabler-filled 
+                        icon-tabler-caret-down"><path stroke="none" 
+                        d="M0 0h24v24H0z" fill="none"/><path d="M18 9c.852 0 1.297 
+                        .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 
+                        -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 
+                        -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 
+                        -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 
+                        -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 
+                        -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 
+                        -.01l.06 -.01l.057 -.004l12.059 -.002z" /></svg>
+                    </summary>
+                    <div class="filter-options">
+                        <div>Barcelona</div>
+                        <div>Bilbao</div>
+                        <div>Madrid</div>
+                        <div>Málaga</div>
+                        <div>Valencia</div>
+                    </div>
+                </details>
+                <details class="filter">
+                    <summary>
+                        Tipo de contrato
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" 
+                        height="24" viewBox="0 0 24 24" fill="currentColor" 
+                        class="icon icon-tabler icons-tabler-filled 
+                        icon-tabler-caret-down"><path stroke="none" 
+                        d="M0 0h24v24H0z" fill="none"/><path d="M18 9c.852 0 1.297 
+                        .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 
+                        -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 
+                        -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 
+                        -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 
+                        -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 
+                        -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 
+                        -.01l.06 -.01l.057 -.004l12.059 -.002z" /></svg>
+                    </summary>
+                    <div class="filter-options">
+                        <div>Formativo</div>
+                        <div>Temporal</div>
+                        <div>Indefinido</div>
+                    </div>
+                </details>
+                <details class="filter">
+                    <summary>
+                        Nivel de experiencia
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" 
+                        height="24" viewBox="0 0 24 24" fill="currentColor" 
+                        class="icon icon-tabler icons-tabler-filled 
+                        icon-tabler-caret-down"><path stroke="none" 
+                        d="M0 0h24v24H0z" fill="none"/><path d="M18 9c.852 0 1.297 
+                        .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 
+                        -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 
+                        -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 
+                        -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 
+                        -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 
+                        -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 
+                        -.01l.06 -.01l.057 -.004l12.059 -.002z" /></svg>
+                    </summary>
+                    <div class="filter-options">
+                        <div>Sin experiencia</div>
+                        <div> Menos de 1 año</div>
+                        <div>1-5 años</div>
+                        <div>Más de 5 años</div>
+                    </div>
+                </details>
+            </div>
+        </section>
+        
+        <h2> Resultados de búsqueda</h2>
 
         <section>
-            <!--Dentro de las secciones tambien podemos tener encabezados para dividir los contenidos.-->
-            <header>
-                <h2>¿Por qué utilizar MafeseJobs?</h2>
-                <p>MafeseJobs es la principal plataforma de búsqueda de empleo para desarrolladores. 
-                    Conectamos a los mejores talentos con las empresas más innovadoras</p>
-            </header>
-
-            <!--Dentro de una sección podemos poner un footer para dividir los contenidos.-->
-            <footer>
-                <!--Se utiliza cuando es un contenido reutilizable, que puede funcionar de forma separada-->
-                <article>
-                    <svg  xmlns="http://www.w3.org/2000/svg"  
-                    width="24"  height="24"  viewBox="0 0 24 24"  
-                    fill="none"  stroke="currentColor"  stroke-width="1.25"  
-                    stroke-linecap="round"  stroke-linejoin="round"  
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-                    <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" />
-                    <path d="M3 13a20 20 0 0 0 18 0" /></svg>
-
-                    <h3>Encuentra el trabajo de tus sueños</h3>
-                    <p>Busca miles de empleos de las mejores empresas de todo el mundo.</p>
-                </article>
-
-                <article>
-                    <svg  xmlns="http://www.w3.org/2000/svg"  
-                    width="24"  height="24"  viewBox="0 0 24 24"  
-                    fill="none"  stroke="currentColor"  stroke-width="1.25"  
-                    stroke-linecap="round"  stroke-linejoin="round"  
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-businessplan">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M16 6m-5 0a5 3 0 1 0 10 0a5 3 0 1 0 -10 0" />
-                    <path d="M11 6v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
-                    <path d="M11 10v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
-                    <path d="M11 14v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
-                    <path d="M7 9h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" />   
-                    <path d="M5 15v1m0 -8v1" /></svg>
-
-                    <h3>Conecta con las mejores empresas</h3>
-                    <p>Conecta con empresas que están contratando por tus habilidades</p>
-                </article>
-
-                <article>
-                    <svg  xmlns="http://www.w3.org/2000/svg"  
-                    width="24"  height="24"  viewBox="0 0 24 24"  
-                    fill="none"  stroke="currentColor"  stroke-width="1.25"  
-                    stroke-linecap="round"  stroke-linejoin="round"  
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-tax-euro">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M8.487 21h7.026a4 4 0 0 0 3.808 -5.224l-1.706 -5.306a5 5 0 0 0 -4.76 -3.47h-1.71a5 5 0 0 0 -4.76 3.47l-1.706 5.306a4 4 0 0 0 3.808 5.224" />
-                    <path d="M15 3q -1 4 -3 4t -3 -4z" />
-                    <path d="M12 14h-3" />
-                    <path d="M14 11.172a3 3 0 1 0 0 5.656" /></svg>
-
-                    <h3>Obtén el salario que te mereces</h3>
-                    <p>Obtén el salario qeu mereces con nuestra calculadora de salarios.</p>
-                </article>
-            </footer>
             
+            <article>
+                <header>
+                    <div>
+                        <h3> Ingeniero de Software</h3>
+                        <small> Tech Solutions Inc. | Remoto</small>
+                    </div>
+                    <button type="submit">Aplicar</button>
+                </header>
+                <p>
+                    Buscamos un Ingeniero se software con experiencia en desarrollo web y conocimientos en JAvaScript, REact y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.
+                </p>
+            </article>
+            <article>
+                <header>
+                    <div>
+                        <h3> Analista de datos</h3>
+                        <small> Data Driven Co. | Ciudad de México</small>
+                    </div>
+                    <button type="submit">Aplicar</button>
+                </header>
+                <p>
+                    Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y herramientas de visualización. Se requiere conocimeintos de SQL, Python y R.
+                </p>
+            </article>
+            <article>
+                <header>
+                    <div>
+                        <h3> Desarrollador de Aplicaciones Móviles</h3>
+                        <small>Mobile Apps Ltd. | Guadalajara</small>
+                    </div>
+                    <button type="submit">Aplicar</button>
+                </header>
+                <p>
+                    Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.        
+                </p>
+            </article>
+            <article>
+                <header>
+                    <div>
+                        <h3> Ingeniero de DevOps</h3>
+                        <small> Cloud Services SA | Remoto</small>
+                    </div>
+                    <button type="submit">Aplicar</button>
+                </header>
+                <p>
+                    Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructuras en la nube, automatización de procesos y herramientas de integración continua. Se requiere conocimientos en AWS, Azure o GCP.
+                </p>
+            </article>
         </section>
     </main>
 
-    <!--Añadimos el footer con la información de los derechos de autor de la página-->
     <footer>
-        <small>&copy; 2025 Mafese. Todos los derechos reservados</small>
+        <nav class="pagination">
+            <a href="#" class="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                viewBox="0 0 24 24" fill="currentColor" 
+                class="icon icon-tabler icons-tabler-filled icon-tabler-caret-left">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M13.883 5.007l.058 -.005h.118l.058 .005l.06 .009l.052 .01l.108 
+                .032l.067 .027l.132 .07l.09 .065l.081 .073l.083 .094l.054 .077l.054 
+                .096l.017 .036l.027 .067l.032 .108l.01 .053l.01 .06l.004 .057l.002 .059v12c0 
+                .852 -.986 1.297 -1.623 .783l-.084 -.076l-6 -6a1 1 0 0 1 -.083 -1.32l.083 
+                -.094l6 -6l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 
+                -.032l.053 -.01l.06 -.01z" /></svg>
+            </a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#" class="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                viewBox="0 0 24 24" fill="currentColor" 
+                class="icon icon-tabler icons-tabler-filled icon-tabler-caret-right">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6c0 -.852 
+                .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 
+                6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 
+                .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 
+                -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 
+                -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 
+                -.053l-.01 -.06l-.004 -.057l-.002 -12.059z" /></svg>
+            </a>
+        </nav>
     </footer>
+
 </body>
 
 </html>
