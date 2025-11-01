@@ -5,7 +5,7 @@
 <!--La etiqueta head no muestra nada, solo para metadatos-->
 <head> 
     <!--El titulo de la página-->
-    <title> MafeseJobs - Inicio</title>
+    <title> MafeseJobs - Busqueda</title>
 
     <!--Permite hacer uso de caracteres especiales-->
     <meta charset="UTF-8" />
@@ -30,24 +30,22 @@
             <!--href es la referencia de la página a la que queremos ir-->
             <a href = ""> Inicio</a>
             <a href = ""> Empleos</a>
+            <a href = ""> Empresas</a>
+            <a href = ""> Salarios</a>
         </nav>
         
         <!--div indica división, es un contenedor que organiza cosas, no tiene un significado-->
         <div>
-            <a href="">Publicar un empleo</a>
-            <a href="">Iniciar sesión</a>
+            <a href="">Subir CV</a>
+            <img src="./images/foto_marina.png" width="30"/>
         </div>
     </header>
 
     <main>
 
         <section>
-            <!--Insertamos una imagen llamada background.webp en la misma ubicación del archivo actual-->
-            <!--La etiqueta img agrega una imagen, solo permite atributos-->
-            <img src="./images/background.jpg" width="1000"/>
-
-            <h1> Encuentra el trabajo de tus sueños</h1>
-            <p>Únete a la comunidad más grande de desarrolladores y encuentra tu próxiam oportunidad</p>
+            <h1> Encuentra tu próximo trabajo</h1>
+            <p>Explora miles de oportuniadades en el sector tecnológico</p>
             <form role="search">
                 <!--Inserta un icono con la etiqueta en svg (buscado en TABLER ICONS)-->
                 <!--Son imágenes que permiten cambiar su escala para personalizar sin perder la calidad-->      
@@ -62,7 +60,7 @@
                 <path d="M4 12h4" /><path d="M4 18h4" /></svg>
     
                 <!--Permite introducir texto, el tipo indica lo que se va a introducir, puede ser number, color, etc.-->
-                <input type="text" placeholder="Buscar empleo por titulo, habilidad o empresa">
+                <input type="text" placeholder="Buscar trabajos, empresas o habilidades">
                 
                 <!--Es un navigable pero que no va a ir a otra página-->
                 <button type="submit">Buscar</button> 
